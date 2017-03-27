@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl">
+<nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl col-xs-6">
   <div class="navbar-header">
     <!-- <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false"></button> -->
     <span class="">
@@ -9,11 +9,11 @@
   </div>
 </nav>
 
-<nav class="navbar-fixed-top">
+<nav class="navbar-fixed-top col-xs-6 col-xs-offset-6">
   <div class="navbar-right navbar-header">
-    <span class="login" style="margin-right: 20px">
+    <span class="login">
       {% if user.is_authenticated %}
-      <a class="navbar-brand" style="color:#777777;float:right;margin-right:30px" href="{% url 'mypage' %}" style="color: #FFFFFF;"><i class="fa fa-user" aria-hidden="true"></i></a>
+      <a class="navbar-brand" style="color:#777777;float:right;margin-right:20px" href="{% url 'mypage' %}" style="color: #FFFFFF;"><i class="fa fa-user" aria-hidden="true"></i></a>
       {% endif %}
       <a class="navbar-brand" style="color:#3b5998;float:right" href="{% url 'social:begin' 'facebook' %}"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
     </span>
