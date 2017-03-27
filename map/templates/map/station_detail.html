@@ -1,0 +1,71 @@
+{% extends 'map/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+  <div class="row" lang="ko">
+    <div class="col-xs-offset-2 col-xs-8">
+      <div class="station_detail ">
+        <span class="col-xs-6"><h2>{{ station }}</h2></span>
+        <span class="col-xs-6" style="text-align:right; margin-top:15px"><h4><a href="{% url 'home' %}">노선도 보기</a></h4></span>
+          <br/>
+          <table class="table table-hover">
+
+            {% for nick in nicks %}
+            <tr>
+              <!-- ranking / nickname -->
+              <td>{{ forloop.counter }}</td>
+              <td width="40%">{{ nick.name }}</td>
+
+              <!-- author of nickname / delete button -->
+              {% if nick.author == user %}
+              <td width="10%">
+                <a href="{% url 'station:nick_delete' station.pk nick.pk %}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              </td>
+              <td width="30%"><i class="fa fa-user" aria-hidden="true"></i> &nbsp; Me</td>
+              {% else %}
+              <td align="right" width="10%">
+              </td>
+              <td width="20%"><i class="fa fa-user-o" aria-hidden="true"></i> &nbsp; {{ nick.author }}</td>
+              {% endif %}
+
+              <!-- Like count -->
+              <td align="right" width="10%">{{ nick.like_set.count }}</td>
+
+              <!-- like button -->
+              <td align="right" width="10%">
+                <!-- {% if nick.like in nick.user_likes %} -->
+                  <!-- <a href="{% url 'station:nick_like' station.pk nick.pk %}"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a> -->
+                  <!-- not liked -->
+                <!-- {% else %} -->
+                  <a href="{% url 'station:nick_like' station.pk nick.pk %}"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+
+        <p style="text-align:right">
+          {% if nicks.has_previous %}
+            <a href="?{{ page_request_var }}={{ nicks.previous_page_number }}">previous</a>
+          {% endif %}
+          <span>
+            {{ nicks.number }} of {{ nicks.paginator.num_pages }}
+          </span>
+          {% if nicks.has_next %}
+            <a href="?{{ page_request_var }}={{ nicks.next_page_number }}">next</a>
+          {% endif %}
+        </p>
+
+        <form action="" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+        <hr>
+        <a href="{% url 'home' %}">Back to main</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

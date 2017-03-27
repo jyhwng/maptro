@@ -1,0 +1,41 @@
+{% extends 'map/base.html' %}
+
+{% block content %}
+<div class="container" style="margin-top: 60px">
+  <div class="mypage" style="color:white">
+  <p style="color: white">Hi, {{ user }}!</p><br/>
+  <h4>My Nicks</h4>
+  {% for nick in my_nicks %}
+  <table class="table table-hover">
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ nick.station }}</td>
+      <td>{{ nick }}</td>
+      <td>{{ nick.like_set.count }}</td>
+    </tr>
+  </table>
+  {% endfor %}
+
+  <p style="text-align:right">
+    {% if nicks.has_previous %}
+      <a href="?{{ page_request_var }}={{ nicks.previous_page_number }}">previous</a>
+    {% endif %}
+    <span>
+      {{ nicks.number }} of {{ nicks.paginator.num_pages }}
+    </span>
+    {% if nicks.has_next %}
+      <a href="?{{ page_request_var }}={{ nicks.next_page_number }}">next</a>
+    {% endif %}
+  </p>
+
+
+  <hr>
+  <p style="color:#777777">Do you want to logout? &nbsp;
+    <a href="{% url "logout" %}" style="color:#777777">
+      Logout
+    </a>
+  </p>
+  </div>
+</div>
+
+{% endblock %}

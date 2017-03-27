@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap-theme.css' %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap-custom.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/style_map.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'map/css/font-awesome.css' %}" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{% static 'map/js/bootstrap.js' %}"></script>
+  <script src="{% static 'map/js/modal.js' %}"></script>
+
+
+  <title>Maptro</title>
+
+</head>
+<body>
+  {% include "map/navbar.html" %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

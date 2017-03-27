@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include, url
+from django.contrib.auth import views as auth_views
+
+from django.conf.urls.static import static
+from map import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.home, name="home"),
+    url(r'^map/', include('map.urls', namespace="station")),
+    url('', include('social_django.urls', namespace='social')),
+    # url(r'^login/$', auth_views.login, name='login'),
+    # url(r'^logout/$', auth_views.logout, { 'template_name': 'logout.html'}),
+    url(r'^logout/$', auth_views.logout, name='logout'),
+    # http://python-social-auth.readthedocs.io/en/latest/configuration/django.html
+    url(r'^mypage/$', views.mypage, name='mypage'),
 ]

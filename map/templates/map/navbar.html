@@ -1,0 +1,27 @@
+<nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl">
+  <div class="navbar-header">
+    <!-- <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false"></button> -->
+    <span class="">
+      <a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;">Maptro</a>
+    </span>
+
+
+  </div>
+</nav>
+
+<nav class="navbar-fixed-top">
+  <div class="navbar-right navbar-header">
+    <span class="login" style="margin-right: 20px">
+      {% if user.is_authenticated %}
+      <a class="navbar-brand" style="color:#777777;float:right;margin-right:30px" href="{% url 'mypage' %}" style="color: #FFFFFF;"><i class="fa fa-user" aria-hidden="true"></i></a>
+      {% endif %}
+      <a class="navbar-brand" style="color:#3b5998;float:right" href="{% url 'social:begin' 'facebook' %}"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+    </span>
+  </div>
+</nav>
+
+<nav class="navbar-fixed-bottom">
+  <a href="{% url 'home' %}" style="color:#777777">Maptro</a>
+  by <a href="https://jyhwng.github.io/" style="color:#777777">jyhwng</a> /
+  design <a href="" style="color:#777777">heihei</a>
+</nav>

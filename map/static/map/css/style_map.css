@@ -1,0 +1,351 @@
+body { background-color: #212121; }
+
+.background{fill:#212121;}
+.l2{fill:#21B449;}
+
+a:visited {
+    /*color: white;*/
+}
+
+svg { width:100%; height:100% }
+
+.node{fill:#FFFFFF;}
+.node_l1{fill:#0373BD;}
+.node_l2{fill:#21B449;}
+.node_l3{fill:#F76B30;}
+.node_l4{fill:#14C5F7;}
+.node_l5{fill:#C6178C;}
+.node_l6{fill:#843039;}
+.node_l7{fill:#9ACD38;}
+.node_l8{fill:#F772AD;}
+.node_l9{fill:#D47B28;}
+.node_la{fill:#ADCEEF;}
+.node_lb{fill:#FFB60E;}
+.node_lg{fill:#D8E9C1;}
+.node_lj{fill:#D9EAC1;}
+.node_ls{fill:#EF1921;}
+.st0 {fill:#FFFFFF;}
+
+/*.outer {
+  width: 1000px;
+  height: auto;
+}*/
+
+body{
+/*background: #303030;*/
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  z-index: 0;
+}
+
+svg .l1 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l1:hover {
+fill: #0373BD;
+z-index: 50000;
+}
+
+svg .l1 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+z-index: 18;
+}
+
+svg .l3 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l3:hover {
+fill: #F76B30;
+}
+
+svg .l3 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l4 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l4:hover {
+fill: #14C5F7;
+}
+
+svg .l4 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l5 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l5:hover {
+fill: #C6178C;
+}
+
+svg .l5 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l6 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l6:hover {
+fill: #843039;
+}
+
+svg .l6 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l7 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l7:hover {
+fill: #9ACD38;
+}
+
+svg .l7 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l8 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l8:hover {
+fill: #F772AD;
+}
+
+svg .l8 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+svg .l9 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .l9:hover {
+fill: #D47B28;
+}
+
+svg .l9 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* =========
+* Line AREX
+* ========= */
+
+svg .la {
+fill: #303030;
+z-index: 1;
+}
+
+svg .la:hover {
+fill: #ADCEEF;
+}
+
+svg .la {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* ============
+* Line Bundang
+* ============ */
+
+svg .lb {
+fill: #303030;
+z-index: 1;
+}
+
+svg .lb:hover {
+fill: #FFB60E;
+}
+
+svg .lb {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* =============
+* Line Everland
+* ============= */
+
+svg .le {
+fill: #303030;
+z-index: 1;
+}
+
+svg .le:hover {
+fill: #21B449;
+}
+
+svg .le {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* =====================
+* Line Gyeongui-Jungang
+* ===================== */
+
+svg .lg {
+fill: #303030;
+z-index: 1;
+}
+
+svg .lg:hover {
+fill: #D8E9C1;
+}
+
+svg .lg {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* ==============
+* Line Incheon 1
+* ============== */
+
+svg .li1 {
+fill: #303030;
+z-index: 1;
+}
+
+svg .li1:hover {
+fill: #83D6EF;
+}
+
+svg .li1 {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* =============================
+* Line Jungang, Gyeongchun, ITX
+* ============================= */
+
+svg .lj {
+fill: #303030;
+z-index: 1;
+}
+
+svg .lj:hover {
+fill: #D9EAC1;
+}
+
+svg .lj {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* ================
+* Line Shinbundang
+* ================ */
+
+svg .ls {
+fill: #303030;
+z-index: 1;
+}
+
+svg .ls:hover {
+fill: #EF1921;
+}
+
+svg .ls {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* =========
+* Line Suin
+* ========= */
+
+svg .lsi {
+fill: #303030;
+z-index: 1;
+}
+
+svg .lsi:hover {
+fill: #F76B30;
+}
+
+svg .lsi {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}
+
+/* ==============
+* Line Uijeongbu
+* ============== */
+
+svg .lu {
+fill: #303030;
+z-index: 1;
+}
+
+svg .lu:hover {
+fill: #FFB60E;
+}
+
+svg .lu {
+transition: 200ms;
+transition-timing-function: ease-in-out;
+-webkit-transition: 200ms;
+-webkit-transition-timing-function: ease-in-out;
+}

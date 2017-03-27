@@ -1,0 +1,54 @@
+{% for station in stations %}
+
+{% if station.nick_set.first is not None %}
+<text text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})" class="st0">
+  <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
+    {{ station.get_best_nick.first }}
+  </a>
+</text>
+{% else %}
+<text style="fill: #777777;" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})" class="st0">
+  <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
+    {{ station.name }}
+  </a>
+</text>
+{% endif %}
+
+{% endfor %}
+
+<!-- Modal -->
+{% for station in stations %}
+<div class="modal fade" id="{{ station.name }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" lang="ko">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">{{ station.name }}</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-6">
+            <ol>
+            {% for nick in station.get_best_nick|slice:":5" %}
+              <li>{{ nick.name }} ({{ nick.like_set.count }})</li>
+              {% empty %}
+              아직 이름이 없습니다. 이름을 지어주세요.
+            {% endfor %}
+            </ol>
+          </div>
+          <div class="col-xs-6">
+            <form action="{% url 'station:station_detail' station.pk %}" method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="{% url 'station:station_detail' station.pk %}" style="color: #333;">더보기</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
