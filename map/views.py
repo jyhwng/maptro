@@ -15,17 +15,15 @@ def home(request):
     lines = Line.objects.all()
     stations = Station.objects.all()
     form = NickForm()
-    # top_nicks = Nick.objects\
-    #     .annotate(num_likes=Count('like'))\
-    #     .order_by('-num_likes')[:5]
 
     context = {
         'lines' : lines,
         'stations' : stations,
         'form' : form,
-        # 'top_nicks' : top_nicks,
     }
+    
     return render(request, 'map/index.html', context)
+
 
 @login_required
 def station_detail(request, station_pk):
@@ -74,6 +72,7 @@ def station_detail(request, station_pk):
 
     return render(request, 'map/station_detail.html', context)
 
+
 @login_required
 def nick_like(request, station_pk, nick_pk):
     station = get_object_or_404(Station, pk=station_pk)
@@ -101,12 +100,10 @@ def nick_delete(request, station_pk, nick_pk):
     return redirect(station)
 
 
-def modal(request):
-    return render(request, 'map/modal.html')
-
 def logout(request):
     # return redirect(home)
     return render(request, 'map/logout.html')
+
 
 def mypage(request):
     user = request.user

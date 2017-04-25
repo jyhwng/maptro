@@ -61,24 +61,19 @@ svg .l2 {
   transition-timing-function: ease-in-out;
   -webkit-transition: 200ms;
   -webkit-transition-timing-function: ease-in-out;
-  z-index: 50000;
 }
 
 svg .l1 {
+  z-index: 100;
   fill: #0373BD;
   transition: 200ms;
   transition-timing-function: ease-in-out;
   -webkit-transition: 200ms;
   -webkit-transition-timing-function: ease-in-out;
-  z-index: 18;
-}
-
-svg .l3:hover {
-  fill: #F76B30;
 }
 
 svg .l3 {
-  fill: #303030;
+  fill: #F76B30;
   transition: 200ms;
   transition-timing-function: ease-in-out;
   -webkit-transition: 200ms;
@@ -86,94 +81,51 @@ svg .l3 {
 }
 
 svg .l4 {
-fill: #303030;
-}
-
-svg .l4:hover {
-fill: #14C5F7;
-}
-
-svg .l4 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #14C5F7;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l5 {
-fill: #303030;
-
-}
-
-svg .l5:hover {
-fill: #C6178C;
-}
-
-svg .l5 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #C6178C;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l6 {
-fill: #303030;
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
-}
-
-svg .l6:hover {
-fill: #843039;
+  fill: #843039;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l7 {
-fill: #303030;
-
-}
-
-svg .l7:hover {
-fill: #9ACD38;
-}
-
-svg .l7 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #9ACD38;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l8 {
-fill: #303030;
-
-}
-
-svg .l8:hover {
-fill: #F772AD;
-}
-
-svg .l8 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #F772AD;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l9 {
-fill: #303030;
-
-}
-
-svg .l9:hover {
-fill: #D47B28;
-}
-
-svg .l9 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D47B28;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
@@ -181,19 +133,11 @@ transition-timing-function: ease-in-out;
 * ========= */
 
 svg .la {
-fill: #303030;
-
-}
-
-svg .la:hover {
-fill: #ADCEEF;
-}
-
-svg .la {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #ADCEEF;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ============
@@ -201,19 +145,11 @@ transition-timing-function: ease-in-out;
 * ============ */
 
 svg .lb {
-fill: #303030;
-
-}
-
-svg .lb:hover {
-fill: #FFB60E;
-}
-
-svg .lb {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #FFB60E;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============
@@ -221,19 +157,11 @@ transition-timing-function: ease-in-out;
 * ============= */
 
 svg .le {
-fill: #303030;
-
-}
-
-svg .le:hover {
-fill: #21B449;
-}
-
-svg .le {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #21B449;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =====================
@@ -241,19 +169,11 @@ transition-timing-function: ease-in-out;
 * ===================== */
 
 svg .lg {
-fill: #303030;
-
-}
-
-svg .lg:hover {
-fill: #D8E9C1;
-}
-
-svg .lg {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D8E9C1;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ==============
@@ -261,19 +181,11 @@ transition-timing-function: ease-in-out;
 * ============== */
 
 svg .li1 {
-fill: #303030;
-
-}
-
-svg .li1:hover {
-fill: #83D6EF;
-}
-
-svg .li1 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #83D6EF;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============================
@@ -281,19 +193,11 @@ transition-timing-function: ease-in-out;
 * ============================= */
 
 svg .lj {
-fill: #303030;
-
-}
-
-svg .lj:hover {
-fill: #D9EAC1;
-}
-
-svg .lj {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D9EAC1;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ================
@@ -301,19 +205,11 @@ transition-timing-function: ease-in-out;
 * ================ */
 
 svg .ls {
-fill: #303030;
-
-}
-
-svg .ls:hover {
-fill: #EF1921;
-}
-
-svg .ls {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #EF1921;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
@@ -321,19 +217,11 @@ transition-timing-function: ease-in-out;
 * ========= */
 
 svg .lsi {
-fill: #303030;
-
-}
-
-svg .lsi:hover {
-fill: #F76B30;
-}
-
-svg .lsi {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #F76B30;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ==============
@@ -341,15 +229,19 @@ transition-timing-function: ease-in-out;
 * ============== */
 
 svg .lu {
-fill: #303030;
-
+  fill: #FFB60E;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .lu:hover {
-fill: #FFB60E;
-}
+/* ==============
+* Line Songdo
+* ============== */
 
-svg .lu {
+svg .lsd {
+fill: #F76B30;
 transition: 200ms;
 transition-timing-function: ease-in-out;
 -webkit-transition: 200ms;
