@@ -12,6 +12,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def home(request):
+    lines = Line.objects.all()
     stations = Station.objects.all()
     form = NickForm()
     # top_nicks = Nick.objects\
@@ -19,6 +20,7 @@ def home(request):
     #     .order_by('-num_likes')[:5]
 
     context = {
+        'lines' : lines,
         'stations' : stations,
         'form' : form,
         # 'top_nicks' : top_nicks,
@@ -101,7 +103,6 @@ def nick_delete(request, station_pk, nick_pk):
 
 def modal(request):
     return render(request, 'map/modal.html')
-
 
 def logout(request):
     # return redirect(home)

@@ -1,19 +1,17 @@
 {% for station in stations %}
-
-{% if station.nick_set.first is not None %}
-<text text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})" class="st0">
-  <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
-    {{ station.get_best_nick.first }}
-  </a>
-</text>
-{% else %}
-<text style="fill: #777777;" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})" class="st0">
-  <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
-    {{ station.name }}
-  </a>
-</text>
-{% endif %}
-
+    {% if station.nick_set.first is not None %}
+        <text class="stnm_l{{ no }}" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
+            <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
+              {{ station.get_best_nick.first }}
+            </a>
+        </text>
+    {% else %}
+        <text class="stnm_l{{ no }}" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
+            <a type="button" data-toggle="modal" data-target="#{{ station.name }}">
+              {{ station.name }}
+            </a>
+        </text>
+    {% endif %}
 {% endfor %}
 
 <!-- Modal -->

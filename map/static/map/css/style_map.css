@@ -1,15 +1,37 @@
-body { background-color: #212121; }
+/* ====
+General
+==== */
 
-.background{fill:#212121;}
-.l2{fill:#21B449;}
+body {
+  background-color: #212121;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  z-index: 0;
+}
+
+.background{
+  fill:#212121;
+}
 
 a:visited {
     /*color: white;*/
 }
 
-svg { width:100%; height:100% }
+svg {
+  width:100%;
+  height:100%;
+}
 
-.node{fill:#FFFFFF;}
+/* ====
+Nodes
+==== */
+
+.node {
+  fill:#FFFFFF;
+}
+
 .node_l1{fill:#0373BD;}
 .node_l2{fill:#21B449;}
 .node_l3{fill:#F76B30;}
@@ -24,59 +46,47 @@ svg { width:100%; height:100% }
 .node_lg{fill:#D8E9C1;}
 .node_lj{fill:#D9EAC1;}
 .node_ls{fill:#EF1921;}
-.st0 {fill:#FFFFFF;}
 
-/*.outer {
-  width: 1000px;
-  height: auto;
+/*.st0 {
+  fill:#777777;
 }*/
 
-body{
-/*background: #303030;*/
-  margin-left: 0px;
-  margin-top: 0px;
-  padding-left: 0px;
-  padding-top: 0px;
-  z-index: 0;
+/* ====
+Lines
+==== */
+
+svg .l2 {
+  fill: #21B449;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+  z-index: 50000;
 }
 
 svg .l1 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l1:hover {
-fill: #0373BD;
-z-index: 50000;
-}
-
-svg .l1 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
-z-index: 18;
-}
-
-svg .l3 {
-fill: #303030;
-z-index: 1;
+  fill: #0373BD;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+  z-index: 18;
 }
 
 svg .l3:hover {
-fill: #F76B30;
+  fill: #F76B30;
 }
 
 svg .l3 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #303030;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l4 {
 fill: #303030;
-z-index: 1;
 }
 
 svg .l4:hover {
@@ -92,7 +102,7 @@ transition-timing-function: ease-in-out;
 
 svg .l5 {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .l5:hover {
@@ -108,23 +118,19 @@ transition-timing-function: ease-in-out;
 
 svg .l6 {
 fill: #303030;
-z-index: 1;
-}
-
-svg .l6:hover {
-fill: #843039;
-}
-
-svg .l6 {
 transition: 200ms;
 transition-timing-function: ease-in-out;
 -webkit-transition: 200ms;
 -webkit-transition-timing-function: ease-in-out;
 }
 
+svg .l6:hover {
+fill: #843039;
+}
+
 svg .l7 {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .l7:hover {
@@ -140,7 +146,7 @@ transition-timing-function: ease-in-out;
 
 svg .l8 {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .l8:hover {
@@ -156,7 +162,7 @@ transition-timing-function: ease-in-out;
 
 svg .l9 {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .l9:hover {
@@ -176,7 +182,7 @@ transition-timing-function: ease-in-out;
 
 svg .la {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .la:hover {
@@ -196,7 +202,7 @@ transition-timing-function: ease-in-out;
 
 svg .lb {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .lb:hover {
@@ -216,7 +222,7 @@ transition-timing-function: ease-in-out;
 
 svg .le {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .le:hover {
@@ -236,7 +242,7 @@ transition-timing-function: ease-in-out;
 
 svg .lg {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .lg:hover {
@@ -256,7 +262,7 @@ transition-timing-function: ease-in-out;
 
 svg .li1 {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .li1:hover {
@@ -276,7 +282,7 @@ transition-timing-function: ease-in-out;
 
 svg .lj {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .lj:hover {
@@ -296,7 +302,7 @@ transition-timing-function: ease-in-out;
 
 svg .ls {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .ls:hover {
@@ -316,7 +322,7 @@ transition-timing-function: ease-in-out;
 
 svg .lsi {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .lsi:hover {
@@ -336,7 +342,7 @@ transition-timing-function: ease-in-out;
 
 svg .lu {
 fill: #303030;
-z-index: 1;
+
 }
 
 svg .lu:hover {
@@ -349,3 +355,23 @@ transition-timing-function: ease-in-out;
 -webkit-transition: 200ms;
 -webkit-transition-timing-function: ease-in-out;
 }
+
+/* ===== *
+* JQuery *
+* ====== */
+
+svg .inactive {
+  fill: #303030;
+}
+
+.node_invisible {
+  fill: transparent;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+/*text {
+  fill: #e0e0e0;
+}*/
