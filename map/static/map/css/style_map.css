@@ -57,74 +57,74 @@ Lines
 
 svg .l2 {
   fill: #21B449;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l1 {
   z-index: 100;
   fill: #0373BD;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l3 {
   fill: #F76B30;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l4 {
   fill: #14C5F7;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l5 {
   fill: #C6178C;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l6 {
   fill: #843039;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l7 {
   fill: #9ACD38;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l8 {
   fill: #F772AD;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l9 {
   fill: #D47B28;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -134,9 +134,9 @@ svg .l9 {
 
 svg .la {
   fill: #ADCEEF;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -146,9 +146,9 @@ svg .la {
 
 svg .lb {
   fill: #FFB60E;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -158,9 +158,9 @@ svg .lb {
 
 svg .le {
   fill: #21B449;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -170,9 +170,9 @@ svg .le {
 
 svg .lg {
   fill: #D8E9C1;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -182,9 +182,9 @@ svg .lg {
 
 svg .li1 {
   fill: #83D6EF;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -194,9 +194,9 @@ svg .li1 {
 
 svg .lj {
   fill: #D9EAC1;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -206,9 +206,9 @@ svg .lj {
 
 svg .ls {
   fill: #EF1921;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -218,9 +218,9 @@ svg .ls {
 
 svg .lsi {
   fill: #F76B30;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -230,9 +230,9 @@ svg .lsi {
 
 svg .lu {
   fill: #FFB60E;
-  transition: 200ms;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -242,9 +242,9 @@ svg .lu {
 
 svg .lsd {
 fill: #F76B30;
-transition: 200ms;
+transition: 300ms;
 transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
+-webkit-transition: 300ms;
 -webkit-transition-timing-function: ease-in-out;
 }
 
@@ -257,13 +257,9 @@ svg .inactive {
 }
 
 .node_invisible {
-  fill: transparent;
-  transition: 200ms;
+  display: none;
+  transition: 300ms;
   transition-timing-function: ease-in-out;
-  -webkit-transition: 200ms;
+  -webkit-transition: 300ms;
   -webkit-transition-timing-function: ease-in-out;
 }
-
-/*text {
-  fill: #e0e0e0;
-}*/

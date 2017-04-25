@@ -1,12 +1,12 @@
 {% for station in stations %}
     {% if station.nick_set.first is not None %}
-        <text style="fill:#FFFFFF" class="stnm_l{{ no }}" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
+        <text style="fill:#FFFFFF" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
             <a type="button" id="{{ station.name }}" class="ui label">
               {{ station.get_best_nick.first }}
             </a>
         </text>
     {% else %}
-        <text style="fill:#777777" class="stnm_l{{ no }}" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
+        <text style="fill:#777777" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
             <a type="button" id="{{ station.name }}" class="ui label">
               {{ station.name }}
             </a>
@@ -43,7 +43,7 @@
         </div>
         <div class="actions">
             <!-- <div class="ui approve button">저장</div> -->
-            <div class="ui button"><a href="{% url 'station:station_detail' station.pk %}">더보기</a></div>
+            <!-- <div class="ui button"><a href="{% url 'station:station_detail' station.pk %}">더보기</a></div> -->
         </div>
     </div>
 {% endfor %}
