@@ -22,20 +22,28 @@
             <div class="ui grid">
                 <div class="two column row">
                     <div class="column">
-                        {% for nick in station.get_best_nick|slice:":5" %}
-                            {{ forloop.counter }}. {{ nick.name }} ({{ nick.like_set.count }})
-                            <br/>
+                      <div class="nick_list">
+                        {% for nick in station.get_best_nick %}
+                        <p>
+                            <span>{{ forloop.counter }}. {{ nick.name }} ({{ nick.like_set.count }})</span>
+                            <span style="float:right"><a href="{% url 'station:nick_like' station.pk nick.pk %}"><i class="thumbs outline up icon"></i>&nbsp;</a></span>
+                            {% if nick.author == user %}
+                            <span style="float:right"><a href="{% url 'station:nick_delete' station.pk nick.pk %}"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;</a></span>
+                            {% endif %}
                         {% empty %}
                             아직 이름이 없습니다. 이름을 지어주세요.
+                        </p>
                         {% endfor %}
+                        </div>
                     </div>
                     <div class="column">
-                        <form class="ui form" action="{% url 'station:station_detail' station.pk %}" method="POST">
+                        <!-- form -->
+                        <form class="ui form" id="name">
                             <div class="field">
                               {% csrf_token %}
                               {{ form.as_p }}
                             </div>
-                            <button type="submit" class="ui button">저장</button>
+                            <button id="submit_{{ station.name }}" type="button" class="ui button">저장</button>
                         </form>
                     </div>
                 </div>
@@ -49,13 +57,27 @@
 {% endfor %}
 
 {% for station in stations %}
-    <script>
-      $( document ).ready(function() {
-        $( '#{{ station.name }}' ).click(function() {
-          $( '#open_{{ station.name }}' )
-          .modal({ blurring: true })
-          .modal('show');
-        });
-      });
-    </script>
+<script>
+  $( document ).ready(function() {
+    $( '#{{ station.name }}' ).click(function() {
+      $( '#open_{{ station.name }}' )
+      .modal({ blurring: true })
+      .modal('show');
+    });
+  });
+
+  $( document ).ready(function() {
+    $( '#submit_{{ station.name }}' ).click(function() {
+      $.ajax({
+        url: '{% url "station:station_detail" station.pk %}',
+        type: 'post',
+        data: $('form').serialize(),
+        success: function(data) {
+          $('.nick_list').append('<span>' + data.name + '</span>');
+          console.log(data.name);
+        }
+      })
+    })
+  })
+</script>
 {% endfor %}

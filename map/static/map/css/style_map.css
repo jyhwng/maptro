@@ -224,7 +224,7 @@ svg .lsi {
   -webkit-transition-timing-function: ease-in-out;
 }
 
-/* ==============
+/* =============
 * Line Uijeongbu
 * ============== */
 
@@ -236,9 +236,9 @@ svg .lu {
   -webkit-transition-timing-function: ease-in-out;
 }
 
-/* ==============
+/* ==========
 * Line Songdo
-* ============== */
+* =========== */
 
 svg .lsd {
 fill: #F76B30;
