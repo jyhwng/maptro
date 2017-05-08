@@ -1,13 +1,13 @@
 {% for station in stations %}
     {% if station.nick_set.first is not None %}
         <text style="fill:#FFFFFF" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
-            <a type="button" id="{{ station.name }}" class="ui label">
+            <a type="button" id="{{ station.id }}" class="ui label">
               {{ station.get_best_nick.first }}
             </a>
         </text>
     {% else %}
         <text style="fill:#777777" text-anchor="{{ station.text_anchor }}" transform="matrix(0.7071 -0.7071 0.7071 0.7071 {{ station.matrix }})">
-            <a type="button" id="{{ station.name }}" class="ui label">
+            <a type="button" id="{{ station.id }}" class="ui label">
               {{ station.name }}
             </a>
         </text>
@@ -15,7 +15,7 @@
 {% endfor %}
 
 {% for station in stations %}
-    <div class="ui small basic modal" id="open_{{ station.name }}">
+    <div class="ui small basic modal" id="open_{{ station.id }}">
         <i class="close icon"></i>
         <div class="header">{{ station.name }}</div>
         <div class="content">
@@ -24,11 +24,11 @@
                     <div class="column">
                       <div class="nick_list">
                         {% for nick in station.get_best_nick %}
-                        <p>
+                        <p id="{{ nick.id }}">
                             <span>{{ forloop.counter }}. {{ nick.name }} ({{ nick.like_set.count }})</span>
                             <span style="float:right"><a href="{% url 'station:nick_like' station.pk nick.pk %}"><i class="thumbs outline up icon"></i>&nbsp;</a></span>
                             {% if nick.author == user %}
-                            <span style="float:right"><a href="{% url 'station:nick_delete' station.pk nick.pk %}"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;</a></span>
+                            <span style="float:right" id="delete_{{ nick.id }}"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;</span>
                             {% endif %}
                         {% empty %}
                             아직 이름이 없습니다. 이름을 지어주세요.
@@ -43,7 +43,7 @@
                               {% csrf_token %}
                               {{ form.as_p }}
                             </div>
-                            <button id="submit_{{ station.name }}" type="button" class="ui button">저장</button>
+                            <button id="submit_{{ station.id }}" type="button" class="ui button">저장</button>
                         </form>
                     </div>
                 </div>
@@ -59,15 +59,15 @@
 {% for station in stations %}
 <script>
   $( document ).ready(function() {
-    $( '#{{ station.name }}' ).click(function() {
-      $( '#open_{{ station.name }}' )
+    $( '#{{ station.id }}' ).click(function() {
+      $( '#open_{{ station.id }}' )
       .modal({ blurring: true })
       .modal('show');
     });
   });
 
   $( document ).ready(function() {
-    $( '#submit_{{ station.name }}' ).click(function() {
+    $( '#submit_{{ station.id }}' ).click(function() {
       $.ajax({
         url: '{% url "station:station_detail" station.pk %}',
         type: 'post',
@@ -79,5 +79,19 @@
       })
     })
   })
+  
+  {% for nick in station.get_best_nick %}
+  $( document ).ready(function() {
+    $( '#delete_{{ nick.id }}').click(function() {
+      $.ajax({
+        url: "{% url 'station:nick_delete' station.pk nick.pk %}",
+        type: 'get',
+        success: function() {
+          $('#{{ nick.id }}').remove();
+        },
+      })
+    })
+  })
+  {% endfor %}
 </script>
 {% endfor %}
