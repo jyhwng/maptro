@@ -38,8 +38,8 @@ class Station(models.Model):
 
 
 class Nick(models.Model):
-    station = models.ForeignKey(Station)
-    name = models.TextField(max_length=10, verbose_name="How would you call this station?")
+    station = models.ForeignKey(Station, on_delete=models.CASCADE)
+    name = models.TextField(max_length=10, verbose_name="This station is...")
     # num_of_likes = models.IntegerField()
     author = models.ForeignKey(User)
     created_at = models.DateTimeField(auto_now_add=True)
