@@ -30,9 +30,9 @@
                             {% if nick.author == user %}
                             <span style="float:right" id="delete_{{ nick.id }}"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;</span>
                             {% endif %}
+                        </p>
                         {% empty %}
                             아직 이름이 없습니다. 이름을 지어주세요.
-                        </p>
                         {% endfor %}
                         </div>
                     </div>
@@ -73,25 +73,27 @@
         type: 'post',
         data: $('form').serialize(),
         success: function(data) {
-          $('.nick_list').append('<span>' + data.name + '</span>');
-          console.log(data.name);
+          $('.nick_list').append(
+            data.id + ',' + data.name
+          );
         }
       })
     })
   })
-  
+
   {% for nick in station.get_best_nick %}
-  $( document ).ready(function() {
+
     $( '#delete_{{ nick.id }}').click(function() {
       $.ajax({
         url: "{% url 'station:nick_delete' station.pk nick.pk %}",
         type: 'get',
         success: function() {
-          $('#{{ nick.id }}').remove();
+          alert('삭제되었습니다.'),
+          $('#{{ nick.id }}').remove();   // TODO : jquery 사라지지 않음.
         },
       })
     })
-  })
+
   {% endfor %}
 </script>
 {% endfor %}

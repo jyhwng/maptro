@@ -14,7 +14,7 @@ class StationAdmin(admin.ModelAdmin):
 @admin.register(Nick)
 class NickAdmin(admin.ModelAdmin):
     # list_display = ['name', 'like', 'created_at']
-    list_display = ['id', 'name', 'created_at']
+    list_display = ['id', 'station_id', 'name', 'created_at']
     list_display_links = ['name']
 
 @admin.register(Like)

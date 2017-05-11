@@ -47,23 +47,22 @@ def station_detail(request, station_pk):
                 .order_by('-num_likes')
     # user_likes = Like.objects.filter(user_id=request.user.id)
 
-    paginator = Paginator(top_nicks, 10)
-    page_request_var = 'page'
-    page = request.GET.get(page_request_var)
-
-    try:
-        nicks = paginator.page(page)
-    except PageNotAnInteger:
-        nicks = paginator.page(1)
-    except EmptyPage:
-        nicks = paginator.page(paginator.num_pages)
+    # paginator = Paginator(top_nicks, 10)
+    # page_request_var = 'page'
+    # page = request.GET.get(page_request_var)
+    #
+    # try:
+    #     nicks = paginator.page(page)
+    # except PageNotAnInteger:
+    #     nicks = paginator.page(1)
+    # except EmptyPage:
+    #     nicks = paginator.page(paginator.num_pages)
 
     context = {
         'station' : station,
         'form' : form,
         'top_nicks' : top_nicks,
-        'page_request_var' : page_request_var,
-        'nicks' : nicks,
+        # 'page_request_var' : page_request_var,
         # 'user_likes' : user_likes,
     }
 
@@ -80,6 +79,7 @@ def station_detail(request, station_pk):
             # return render(request, 'map/station_detail.html', context)
             return JsonResponse({
                         'name' : nick.name,
+                        'id' : nick.id,
                         })
 
 
