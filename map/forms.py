@@ -9,7 +9,6 @@ class NickForm(forms.ModelForm):
         # )
         fields = (
             'name',
-            # 'like',
         )
         widgets = {
             'name' : forms.Textarea(attrs = {'class' : 'form-control', 'rows' : 1}),

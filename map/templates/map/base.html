@@ -1,29 +1,25 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
 
-  {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap-theme.css' %}" />
+    {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'map/semantic/semantic.min.css' %}" />
 
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/bootstrap-custom.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/style.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/style_map.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'map/css/font-awesome.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'map/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'map/css/style_map.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'map/css/font-awesome.css' %}" />
 
+        <script src="{% static 'map/js/jquery-3.2.1.min.js' %}"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{% static 'map/js/bootstrap.js' %}"></script>
-  <script src="{% static 'map/js/modal.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static 'map/semantic/semantic.min.js' %}"></script>
 
-
-  <title>Maptro</title>
-
+    <title>Maptro</title>
 </head>
 <body>
-  {% include "map/navbar.html" %}
+    {% include "map/navbar.html" %}
 
     {% block content %}
     {% endblock %}

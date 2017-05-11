@@ -1,15 +1,37 @@
-body { background-color: #212121; }
+/* ====
+General
+==== */
 
-.background{fill:#212121;}
-.l2{fill:#21B449;}
+body {
+  background-color: #212121;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  z-index: 0;
+}
+
+.background{
+  fill:#212121;
+}
 
 a:visited {
     /*color: white;*/
 }
 
-svg { width:100%; height:100% }
+svg {
+  width:100%;
+  height:100%;
+}
 
-.node{fill:#FFFFFF;}
+/* ====
+Nodes
+==== */
+
+.node {
+  fill:#FFFFFF;
+}
+
 .node_l1{fill:#0373BD;}
 .node_l2{fill:#21B449;}
 .node_l3{fill:#F76B30;}
@@ -24,150 +46,86 @@ svg { width:100%; height:100% }
 .node_lg{fill:#D8E9C1;}
 .node_lj{fill:#D9EAC1;}
 .node_ls{fill:#EF1921;}
-.st0 {fill:#FFFFFF;}
 
-/*.outer {
-  width: 1000px;
-  height: auto;
+/*.st0 {
+  fill:#777777;
 }*/
 
-body{
-/*background: #303030;*/
-  margin-left: 0px;
-  margin-top: 0px;
-  padding-left: 0px;
-  padding-top: 0px;
-  z-index: 0;
+/* ====
+Lines
+==== */
+
+svg .l2 {
+  fill: #21B449;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l1 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l1:hover {
-fill: #0373BD;
-z-index: 50000;
-}
-
-svg .l1 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
-z-index: 18;
+  z-index: 100;
+  fill: #0373BD;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l3 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l3:hover {
-fill: #F76B30;
-}
-
-svg .l3 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #F76B30;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l4 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l4:hover {
-fill: #14C5F7;
-}
-
-svg .l4 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #14C5F7;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l5 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l5:hover {
-fill: #C6178C;
-}
-
-svg .l5 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #C6178C;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l6 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l6:hover {
-fill: #843039;
-}
-
-svg .l6 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #843039;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l7 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l7:hover {
-fill: #9ACD38;
-}
-
-svg .l7 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #9ACD38;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l8 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l8:hover {
-fill: #F772AD;
-}
-
-svg .l8 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #F772AD;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 svg .l9 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .l9:hover {
-fill: #D47B28;
-}
-
-svg .l9 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D47B28;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
@@ -175,19 +133,11 @@ transition-timing-function: ease-in-out;
 * ========= */
 
 svg .la {
-fill: #303030;
-z-index: 1;
-}
-
-svg .la:hover {
-fill: #ADCEEF;
-}
-
-svg .la {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #ADCEEF;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ============
@@ -195,19 +145,11 @@ transition-timing-function: ease-in-out;
 * ============ */
 
 svg .lb {
-fill: #303030;
-z-index: 1;
-}
-
-svg .lb:hover {
-fill: #FFB60E;
-}
-
-svg .lb {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #FFB60E;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============
@@ -215,19 +157,11 @@ transition-timing-function: ease-in-out;
 * ============= */
 
 svg .le {
-fill: #303030;
-z-index: 1;
-}
-
-svg .le:hover {
-fill: #21B449;
-}
-
-svg .le {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #21B449;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =====================
@@ -235,19 +169,11 @@ transition-timing-function: ease-in-out;
 * ===================== */
 
 svg .lg {
-fill: #303030;
-z-index: 1;
-}
-
-svg .lg:hover {
-fill: #D8E9C1;
-}
-
-svg .lg {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D8E9C1;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ==============
@@ -255,19 +181,11 @@ transition-timing-function: ease-in-out;
 * ============== */
 
 svg .li1 {
-fill: #303030;
-z-index: 1;
-}
-
-svg .li1:hover {
-fill: #83D6EF;
-}
-
-svg .li1 {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #83D6EF;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============================
@@ -275,19 +193,11 @@ transition-timing-function: ease-in-out;
 * ============================= */
 
 svg .lj {
-fill: #303030;
-z-index: 1;
-}
-
-svg .lj:hover {
-fill: #D9EAC1;
-}
-
-svg .lj {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #D9EAC1;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ================
@@ -295,19 +205,11 @@ transition-timing-function: ease-in-out;
 * ================ */
 
 svg .ls {
-fill: #303030;
-z-index: 1;
-}
-
-svg .ls:hover {
-fill: #EF1921;
-}
-
-svg .ls {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
+  fill: #EF1921;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
@@ -315,37 +217,49 @@ transition-timing-function: ease-in-out;
 * ========= */
 
 svg .lsi {
-fill: #303030;
-z-index: 1;
+  fill: #F76B30;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .lsi:hover {
-fill: #F76B30;
-}
-
-svg .lsi {
-transition: 200ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
--webkit-transition-timing-function: ease-in-out;
-}
-
-/* ==============
+/* =============
 * Line Uijeongbu
 * ============== */
 
 svg .lu {
-fill: #303030;
-z-index: 1;
+  fill: #FFB60E;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .lu:hover {
-fill: #FFB60E;
-}
+/* ==========
+* Line Songdo
+* =========== */
 
-svg .lu {
-transition: 200ms;
+svg .lsd {
+fill: #F76B30;
+transition: 300ms;
 transition-timing-function: ease-in-out;
--webkit-transition: 200ms;
+-webkit-transition: 300ms;
 -webkit-transition-timing-function: ease-in-out;
+}
+
+/* ===== *
+* JQuery *
+* ====== */
+
+svg .inactive {
+  fill: #303030;
+}
+
+.node_invisible {
+  display: none;
+  transition: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
 }

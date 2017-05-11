@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
+from django.http import JsonResponse
+
 from .models import *
 from .forms import NickForm
 from django.db.models import F
@@ -12,18 +14,28 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 def home(request):
+    lines = Line.objects.all()
     stations = Station.objects.all()
     form = NickForm()
-    # top_nicks = Nick.objects\
-    #     .annotate(num_likes=Count('like'))\
-    #     .order_by('-num_likes')[:5]
+
+    # if request.method == 'POST':
+    #     if request.is_ajax():
+    #         nick = Nick(request.session)
+    #         name = request.POST.get('name')
+    #         print(name)
+    #         return JsonResponse({
+    #             'message':'update {} for {}'.format(nick, nick.station)
+    #             })
+    #     return render(request, 'map/index.html', context)
 
     context = {
+        'lines' : lines,
         'stations' : stations,
         'form' : form,
-        # 'top_nicks' : top_nicks,
     }
+
     return render(request, 'map/index.html', context)
+
 
 @login_required
 def station_detail(request, station_pk):
@@ -62,15 +74,14 @@ def station_detail(request, station_pk):
             nick.station = station
             nick.author = request.user
             # nick 쓴 사람이 request.user 라는거 지정 안하면 not null constraint 생김
-
             # ForeignKey - station 으로 엮여 있기 때문에 어떤 station의 nick 인지 이렇게 지정 안해주면 intergrity error - not null constraint 나옴
             nick.save()
 
-            return render(request, 'map/station_detail.html', context)
-    else:
-        form = NickForm()
+            # return render(request, 'map/station_detail.html', context)
+            return JsonResponse({
+                        'name' : nick.name,
+                        })
 
-    return render(request, 'map/station_detail.html', context)
 
 @login_required
 def nick_like(request, station_pk, nick_pk):
@@ -96,16 +107,13 @@ def nick_delete(request, station_pk, nick_pk):
     nick = get_object_or_404(Nick, pk=nick_pk)
     if request.user == nick.author:
         nick.delete()
-    return redirect(station)
-
-
-def modal(request):
-    return render(request, 'map/modal.html')
+    return JsonResponse({})
 
 
 def logout(request):
     # return redirect(home)
     return render(request, 'map/logout.html')
+
 
 def mypage(request):
     user = request.user

@@ -1,27 +1,30 @@
-<nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl col-xs-6">
-  <div class="navbar-header">
-    <!-- <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false"></button> -->
-    <span class="">
-      <a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;">Maptro</a>
-    </span>
+<div class="ui secondary fixed menu">
+    <a href="{% url 'home' %}" style="color:#FFFFFF;" class="item active">
+        Maptro
+    </a>
 
+    {% if user.is_authenticated %}
+        <a href="{% url 'mypage' %}" class="item">
+            <i style="color:#777777" class="fa fa-user" aria-hidden="true"></i>
+        </a>
+    {% else %}
+        <a class="item" href="{% url 'social:begin' 'facebook' %}">
+          <i style="color:#3b5998" class="fa fa-facebook-f" aria-hidden="true"></i>
+        </a>
+    {% endif %}
 
-  </div>
-</nav>
+    <div class="right menu">
+        <div class="item">
+            <div class="ui transparent icon input">
+                <input type="text" placeholder="Search stations...">
+                <i style="color:#FFFFFF" class="search link icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
-<nav class="navbar-fixed-top col-xs-6 col-xs-offset-6">
-  <div class="navbar-right navbar-header">
-    <span class="login">
-      {% if user.is_authenticated %}
-      <a class="navbar-brand" style="color:#777777;float:right;margin-right:20px" href="{% url 'mypage' %}" style="color: #FFFFFF;"><i class="fa fa-user" aria-hidden="true"></i></a>
-      {% endif %}
-      <a class="navbar-brand" style="color:#3b5998;float:right" href="{% url 'social:begin' 'facebook' %}"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
-    </span>
-  </div>
-</nav>
-
-<nav class="navbar-fixed-bottom">
+<!-- <nav class="navbar-fixed-bottom">
   <a href="{% url 'home' %}" style="color:#777777">Maptro</a>
   by <a href="https://jyhwng.github.io/" style="color:#777777">jyhwng</a> /
   design <a href="" style="color:#777777">heihei</a>
-</nav>
+</nav> -->
