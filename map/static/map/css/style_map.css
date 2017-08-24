@@ -55,211 +55,140 @@ Nodes
 Lines
 ==== */
 
-svg .l2 {
+svg .l2-line {
   fill: #21B449;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l1 {
+svg .l1-line {
   z-index: 100;
   fill: #0373BD;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l3 {
+svg .l3-line {
   fill: #F76B30;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l4 {
+svg .l4-line {
   fill: #14C5F7;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l5 {
+svg .l5-line {
   fill: #C6178C;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l6 {
+svg .l6-line {
   fill: #843039;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l7 {
+svg .l7-line {
   fill: #9ACD38;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l8 {
+svg .l8-line {
   fill: #F772AD;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
-svg .l9 {
+svg .l9-line {
   fill: #D47B28;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
 * Line AREX
 * ========= */
 
-svg .la {
+svg .la-line {
   fill: #ADCEEF;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ============
 * Line Bundang
 * ============ */
 
-svg .lb {
+svg .lb-line {
   fill: #FFB60E;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============
 * Line Everland
 * ============= */
 
-svg .le {
+svg .le-line {
   fill: #21B449;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =====================
 * Line Gyeongui-Jungang
 * ===================== */
 
-svg .lg {
+svg .lg-line {
   fill: #D8E9C1;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ==============
 * Line Incheon 1
 * ============== */
 
-svg .li1 {
+svg .li1-line {
   fill: #83D6EF;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============================
 * Line Jungang, Gyeongchun, ITX
 * ============================= */
 
-svg .lj {
+svg .lj-line {
   fill: #D9EAC1;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ================
 * Line Shinbundang
 * ================ */
 
-svg .ls {
+svg .ls-line {
   fill: #EF1921;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =========
 * Line Suin
 * ========= */
 
-svg .lsi {
+svg .lsi-line {
   fill: #F76B30;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* =============
 * Line Uijeongbu
 * ============== */
 
-svg .lu {
+svg .lu-line {
   fill: #FFB60E;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
 }
 
 /* ==========
 * Line Songdo
 * =========== */
 
-svg .lsd {
-fill: #F76B30;
-transition: 300ms;
-transition-timing-function: ease-in-out;
--webkit-transition: 300ms;
--webkit-transition-timing-function: ease-in-out;
+svg .lsd-line {
+    fill: #F76B30;
 }
 
 /* ===== *
 * JQuery *
 * ====== */
 
-svg .inactive {
+svg .inactive .line {
   fill: #303030;
 }
 
 .node_invisible {
   display: none;
-  transition: 300ms;
-  transition-timing-function: ease-in-out;
-  -webkit-transition: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
+}
+
+.line,
+svg .inactive,
+.node_invisible {
+    transition: 300ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 300ms;
+    -webkit-transition-timing-function: ease-in-out;
 }
